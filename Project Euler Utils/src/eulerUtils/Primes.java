@@ -48,7 +48,7 @@ public class Primes {
 
 		primeListCache = Collections.unmodifiableList(PrimeSieve.genPrimes((int) (2 * Math.sqrt(largestCachedPrime)),
 				largestCachedPrime));
-		Set<Integer> temp = new HashSet<>();
+		Set<Integer> temp = new HashSet<Integer>();
 		temp.addAll(primeListCache);
 		primeSetCache = Collections.unmodifiableSet(temp);
 		System.out.println("resize complete!");
@@ -89,7 +89,7 @@ public class Primes {
 
 		@Override
 		public boolean contains(Object o) {
-			return o instanceof Integer && isPrime((int) o);
+			return o instanceof Integer && isPrime((Integer) o);
 		}
 
 		@Override
